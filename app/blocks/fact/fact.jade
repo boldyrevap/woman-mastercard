@@ -1,0 +1,8 @@
+mixin fact(data)
+
+	+b(class='fact_' + data.dir + ' wow fadeInUp' data-wow-delay=".1s" style="visibility:hidden")
+		+e.info
+			+e('img')(src='./images/number-' + data.id + '.png').number
+			+e('p').text!= data.text
+		+e.images
+			+e('img')(src='./images/facts-' + data.id + '.jpg').photo

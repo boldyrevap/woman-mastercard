@@ -1,0 +1,333 @@
+.fact
+	position relative
+	display flex
+	align-items center
+	justify-content space-between
+
+	+below(768px)
+		padding-bottom wv(200)
+
+	&:before
+		content ''
+		position absolute
+		mix-blend-mode darken
+		filter drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25))
+		background-color #E41B24
+		width w(200)
+		height w(200)
+		z-index 1
+
+	&:nth-of-type(1)
+		padding-top w(140)
+		&::before
+			top 0
+			right 0
+			width w(200)
+			height w(400)
+		.fact__info
+			margin-bottom 20px
+
+		+below(768px)
+			padding-bottom 0
+			&::before
+				top wv(250)
+				width wv(120)
+				height wv(180)
+				
+	&:nth-of-type(2)
+		padding-bottom w(260)
+		&::before
+			bottom 0
+			left 0
+			width w(500)
+			height w(480)
+
+		+below(768px)
+			padding-bottom 0
+			&::before
+				bottom wv(-120)
+				width wv(180)
+				height wv(230)
+
+
+	&:nth-of-type(3)
+		&::before
+			top w(110)
+			left 0
+			width w(100)
+			height w(455)
+
+		+below(768px)
+			padding-bottom 0
+			&::before
+				top wv(460)
+				width wv(130)
+				height wv(365)
+
+	&:nth-of-type(4)
+		&::before
+			bottom w(120)
+			right  0
+			width w(1050)
+			height w(130)
+
+		+below(768px)
+			padding-bottom 0
+			&::before
+				bottom wv(60)
+				width wv(430)
+				height wv(90)
+
+	&:nth-of-type(5)
+		&::before
+			content none
+
+	&:nth-of-type(6)
+		&::before
+			bottom w(-80)
+			right 0
+			width w(330)
+			height w(400)
+
+		+below(768px)
+			padding-bottom 0
+			&::before
+				bottom wv(-80)
+				width wv(200)
+				height wv(290)
+
+	&:nth-of-type(7)
+		padding-bottom w(200)
+		&::before
+			bottom w(100)
+			left 0
+			width w(550)
+			height w(480)
+		.fact__info
+			margin-top 50px
+
+		+below(768px)
+			padding-bottom 0
+			&::before
+				bottom 0
+				width 0
+				height 0
+
+	&:nth-of-type(8)
+		&::before
+			bottom w(120)
+			right 0
+			width w(1100)
+			height w(130)
+
+		+below(768px)
+			padding-bottom 0
+			&::before
+				bottom wv(30)
+				width wv(430)
+				height wv(100)
+
+	&:nth-of-type(9)
+		padding-bottom w(300)
+		&::before
+			bottom 0
+			left w(220)
+			width w(630)
+			height w(480)
+
+		+below(768px)
+			padding-bottom 0
+			&::before
+				bottom wv(-70)
+				left wv(230)
+				width wv(200)
+				height wv(300)
+
+	&:nth-of-type(10)
+		padding-bottom w(300)
+		&::before
+			bottom w(100)
+			left 0
+			width w(1150)
+			height w(130)
+		.fact__info
+			margin-top 50px
+		&::after
+			content ''
+			position absolute
+			mix-blend-mode darken
+			filter drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25))
+			background-color #E41B24
+			width w(350)
+			height w(410)
+			z-index 1
+			top w(350)
+			right 0
+		
+		+below(768px)
+			padding-bottom 0
+			&::before
+				bottom wv(-130)
+				left 0
+				width wv(180)
+				height wv(190)
+
+			&::after
+				width 0
+				height 0
+				top 0
+				right 0
+
+	&:nth-of-type(11)
+		&::before
+			top 0
+			left 0
+			width w(450)
+			height w(450)
+		.fact__info
+			margin-top 100px
+
+		+below(768px)
+			padding-bottom 0
+			&::before
+				top wv(590)
+				left 0
+				width wv(200)
+				height wv(230)
+
+	&:nth-of-type(12)
+		padding-bottom w(200)
+		&::before
+			bottom w(100)
+			right 0
+			width w(300)
+			height w(380)
+
+		+below(768px)
+			padding-bottom 0
+			&::before
+				bottom wv(-50)
+				width wv(100)
+				height wv(200)
+
+	&:nth-of-type(13)
+		&::before
+			top w(50)
+			left 0
+			width w(350)
+			height w(500)
+		.fact__info
+			margin-top 50px
+
+		+below(768px)
+			padding-bottom 0
+			&::before
+				top wv(530)
+				width wv(90)
+				height wv(270)
+
+	&:nth-of-type(14)
+		&::before
+			bottom w(150)
+			right 0
+			width w(850)
+			height w(110)
+
+		+below(768px)
+			padding-bottom 0
+			&::before
+				bottom wv(80)
+				width wv(430)
+				height wv(100)
+
+	&_left
+		flex-flow row nowrap
+		padding-left w(350)
+		padding-right w(40)
+
+		+below(768px)
+			flex-flow column nowrap
+			padding 0
+			padding-top wv(195)
+
+	&_right
+		flex-flow row-reverse nowrap
+		padding-left w(40)
+		padding-right w(295)
+
+		+below(768px)
+			flex-flow column nowrap
+			padding 0
+			padding-top wv(195)
+
+		& .fact__number
+			left w(170)
+
+			+below(768px)
+				left 50%
+				transform translateX(-50%)
+
+		& .fact__text
+			padding-left w(10)
+
+			+below(768px)
+				padding-left 0
+
+	&:first-child
+		padding-right 0
+
+	&:nth-child(2)
+		margin-top w(90)
+
+		+below(768px)
+			margin-top 0
+
+	&__info
+		position relative
+		vertical-align middle
+
+		+below(768px)
+			min-height wv(250)
+
+	&__text
+		position relative
+		max-width w(700)
+		font-size w(48)
+		line-height w(48)
+
+		+below(768px)
+			padding-bottom wv(80)
+			max-width wv(350)
+			font-size wv(32)
+			line-height wv(36)
+
+		&:before
+			content " • "
+
+		& span
+			color $red
+			display inline-block
+			border-bottom 1px solid $red
+
+	&__number
+		position absolute
+		height w(406)
+		top 50%
+		left w(-175)
+		transform translateY(-50%)
+
+		+below(768px)
+			height wv(246)
+			top wv(-90)
+			left 50%
+			transform translateX(-50%)
+
+	&__images
+		position relative
+		max-width w(850)
+		img
+			width 100%
+
+		+below(768px)
+			max-width 100%
+			width 100%

@@ -1,0 +1,126 @@
+.footer
+	background-image url("../../images/footer.jpg")
+	background-repeat no-repeat
+	background-position center
+	background-size cover
+
+	+below(768px)
+		background-image url("../../images/footer-mobile.jpg")
+
+	.header
+		background transparent
+
+	&__row
+		display flex
+		flex-flow row nowrap
+		align-items center
+		justify-content space-between
+
+	&__container
+		min-height 100vh
+		padding w(50) w(150) w(30)
+
+		+below(768px)
+			padding wv(50) wv(30) wv(30)
+
+	&__row
+		display flex
+		flex-flow row nowrap
+		justify-content space-between
+		align-items center
+
+		+below(768px)
+			flex-flow column nowrap
+
+	&__title
+		width 50%
+		padding-right w(50)
+		font-size w(111)
+		line-height w(100)
+		text-transform uppercase
+		font-style italic
+		color white
+
+		+below(768px)
+			position relative
+			width 100%
+			padding-right 0
+			font-size wv(60)
+			line-height wv(55)
+			text-align center
+
+		& b
+			font-family $ff-futur-b
+			font-size w(180)
+			line-height w(150)
+			font-style normal
+			font-weight 800
+
+			+below(768px)
+				font-size wv(90)
+				line-height wv(81)
+
+		& i
+			font-size w(98)
+
+			+below(768px)
+				font-size wv(52)
+
+	&__content
+		width 50%
+		padding-left w(50)
+		margin-bottom w(50)
+
+		+below(768px)
+			padding-top wv(50)
+			padding-left 0
+			width 100%
+
+	&__text
+		font-size w(48)
+		line-height w(48)
+		font-weight 500
+		color white
+
+		a,
+		span
+			color $red
+
+		+below(768px)
+			font-size wv(32)
+			line-height wv(36)
+
+	&__info
+		margin-bottom w(30)
+		font-size w(30)
+		line-height 1.2
+		font-weight 500
+		color white
+
+		a,
+		span
+			color $red
+
+		&:last-child
+			text-transform uppercase
+			text-align center
+
+			& a
+				display inline-block
+				padding w(10) w(30)
+				color white
+				border 2px solid white
+				text-decoration none
+				transition color .3s, border-color .3s
+
+				+below(768px)
+					padding wv(10) wv(30)
+					margin-top wv(20)
+
+				&:hover
+					color $red
+					border-color $red
+
+		+below(768px)
+			font-size wv(20)
+

@@ -1,0 +1,27 @@
+mixin overlay
+
+	+b('section').overlay
+		+e.intro
+			+e('p').info Ответьте, пожалуйста, на вопрос
+			+e.top
+				+e('p').question <span>В КХЛ традиционно присуждаются трофеи по итогам плей-офф и всего сезона:</span> за самый быстрый гол, самый поздний гол, лучшему игроку среди играющих первый полный сезон, самому ценному игроку и т.д. Какого из нижеперечислнных призов не существует?
+			+e.bottom
+				+e.right
+					+e('button').button Золотая шайба.
+					+e('button').button Золотая клюшка.
+					+e('button').button Золотая клюшка.
+					+e('button').button Золотая клюшка.
+				+e.left
+					+e('p').number
+						+e('span').count 01
+						span &nbsp;/&nbsp;
+						+e('span').length 05
+		+e.outro
+			+e.result
+				+e.row
+					+e('p').iq ТВОЙ ХОККЕЙНЫЙ IQ:
+					+e('p').scores (верно 5 из 5)
+				+e.row
+					+e('p').name ХОККЕЙНЫЙ ГУРУ
+			+e.qualification
+				+e('p').description Ты знаешь о хоккее всё! Ты точно не Данис Зарипов?

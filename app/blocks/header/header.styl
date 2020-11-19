@@ -1,0 +1,41 @@
+.header
+	position fixed
+	top 0
+	left 0
+	right 0
+	background-color #0A1214
+	color #0A1214
+	width 100%
+	z-index 25
+
+	&__wrap
+		padding w(5) w(15)
+
+	&__row
+		display flex
+		flex-flow row nowrap
+		align-items center
+		justify-content space-between
+
+		+below(768px)
+			justify-content center
+			position relative
+
+	&__image
+		max-width w(250)
+
+		+below(768px)
+			max-width wv(250)
+
+		img
+			width 100%
+
+		&:last-child
+			max-width w(170)
+
+			+below(768px)
+				display none
+
+			img
+				width 100%
+

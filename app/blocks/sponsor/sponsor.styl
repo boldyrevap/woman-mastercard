@@ -1,0 +1,72 @@
+.sponsor
+	color black
+
+	&__wrap
+		padding w(80) 0
+
+		+below(768px)
+			 padding wv(50) 0 wv(60)
+
+	&__row
+		display flex
+		flex-flow row nowrap
+		align-items center
+		justify-content space-between
+		padding-left w(350)
+
+		+below(768px)
+			 flex-flow column nowrap
+			 padding 0
+
+		&:last-child
+			flex-flow row-reverse nowrap
+			margin-top w(110)
+			padding-left 0
+			padding-right w(350)
+
+			+below(768px)
+				flex-flow column nowrap
+				margin-top wv(60)
+				padding 0
+
+	&__content
+		max-width w(750)
+
+		+below(768px)
+			max-width wv(345)
+			padding-bottom wv(60)
+
+	&__text
+		margin-bottom w(20)
+		font-size w(24)
+		line-height w(31)
+
+		+below(768px)
+			margin-bottom wv(20)
+			font-size wv(24)
+			line-height wv(31)
+
+
+		&:last-child
+			margin-bottom 0
+		a
+			color red
+	&__image
+		max-width w(750)
+		img
+			width 100%
+
+		+below(768px)
+			max-width 100%
+			width 100%
+
+	&__mobile
+		display none
+
+		+below(768px)
+			display block
+
+	&__desk
+
+		+below(768px)
+			display none

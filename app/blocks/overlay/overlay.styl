@@ -1,0 +1,235 @@
+.overlay
+	position fixed
+	top 0
+	left 0
+	right 0
+	bottom 0
+	display flex
+	flex-flow column
+	align-items center
+	justify-content center
+	padding w(15) w(330)
+	background-color $red
+	background-image url("../../images/overlay.png")
+	background-repeat no-repeat
+	background-position center
+	background-size cover
+	opacity 0
+	visibility hidden
+	z-index -1
+	transform translateX(-100%)
+	transition opacity .3s, transform 1s
+
+	&.active
+		opacity 1
+		visibility visible
+		z-index 10
+		transform translateX(0)
+
+	&.show-result
+		opacity 1
+		visibility visible
+		z-index 10
+		position relative
+		min-height 100vh
+		transform translateX(0)
+		transition none
+		.overlay__intro
+			display none
+
+		.overlay__outro
+			display block
+
+	+below(768px)
+		padding wv(15) wv(30)
+		background-image url("../../images/overlay-mobile.png")
+
+	&__info
+		position absolute
+		top 50%
+		left 50%
+		transform translate(-50%, -50%)
+		background-color #fff
+		color $red
+		padding w(20) w(25)
+		font-size w(46)
+		text-align center
+		box-shadow 0 3px 5px rgba(0,0,0,.5)
+		z-index -1
+		opacity 0
+		visibility hidden
+		transition opacity .3s
+
+		&.show
+			opacity 1
+			visibility visible
+			z-index 5
+
+		+below(768px)
+			font-size wv(36)
+			padding wv(20) wv(25)
+
+
+	&__intro
+		position relative
+		display flex
+		flex-flow column nowrap
+		justify-content space-between
+		padding w(50) w(30) w(30) w(70)
+		max-width w(1265)
+		min-height w(855)
+		background-color white
+
+		+below(768px)
+			padding wv(50) wv(15) wv(30)
+			max-width wv(350)
+			min-height wv(658)
+
+	&__question
+		max-width w(1135)
+		font-size w(72)
+		line-height w(60)
+		color $red
+
+		+below(768px)
+			max-width wv(310)
+			font-size wv(32)
+			line-height wv(33)
+
+		& span
+			font-weight bold
+
+	&__top
+		position relative
+		margin-bottom w(20)
+
+		+below(768px)
+			margin-bottom wv(20)
+
+	&__bottom
+		display flex
+		padding-left w(50)
+		justify-content space-between
+		align-items center
+
+		+below(768px)
+			flex-flow column nowrap
+			padding-left 0
+
+	&__right
+		padding-right w(50)
+
+		+below(768px)
+			padding-right 0
+
+	&__button
+		width 100%
+		margin-bottom w(25)
+		padding 0 w(25)
+		background-color white
+		color $red
+		border 1px solid $red
+		text-align left
+		font-size w(42)
+
+		+below(768px)
+			margin-bottom wv(15)
+			padding 0 wv(15)
+			font-size wv(32)
+
+		&:hover
+			background-color $red
+			color white
+
+		&:last-child
+			margin-bottom 0
+
+	&__number
+		display flex
+		flex-flow column nowrap
+		justify-content center
+		align-items center
+		font-size w(120)
+		line-height w(130)
+		color $red
+
+		+below(768px)
+			flex-flow row nowrap
+			padding-top wv(20)
+			padding-left wv(225)
+			font-size wv(48)
+			line-height wv(64)
+
+	&__outro
+		display none
+		padding w(115) w(60) w(30) w(70)
+		max-width w(1265)
+		min-height w(855)
+		background-color white
+
+		+below(768px)
+			padding wv(50) wv(15) wv(30)
+			max-width wv(350)
+			min-height wv(658)
+
+	&__result
+		padding-bottom w(50)
+		display flex
+		flex-flow column nowrap
+		justify-content space-between
+		border-bottom 1px solid $red
+
+		+below(768px)
+			padding-bottom wv(20)
+
+	&__row
+		display flex
+		justify-content space-between
+
+		+below(768px)
+			flex-flow column-reverse nowrap
+			padding-bottom wv(30)
+
+	&__iq
+		font-size w(72)
+		color $red
+
+		+below(768px)
+			font-size wv(48)
+			padding-top wv(30)
+
+	&__scores
+		font-size w(72)
+		color $red
+
+		+below(768px)
+			font-size wv(36)
+			padding-left wv(140)
+
+	&__name
+		padding-top w(50)
+		font-family $ff-futur-b
+		font-size w(144)
+		color $red
+		font-weight 800
+
+		+below(768px)
+			padding-top 0
+			font-size wv(62)
+
+	&__qualification
+		padding-top w(50)
+		max-width w(925)
+
+		+below(768px)
+			padding-top wv(30)
+			max-width wv(315)
+
+	&__description
+		font-size w(72)
+		line-height w(72)
+		color $red
+
+		+below(768px)
+			font-size wv(36)
+			line-height wv(36)

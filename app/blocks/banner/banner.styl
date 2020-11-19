@@ -1,0 +1,70 @@
+.banner
+	position relative
+	padding-top w(80)
+	background-image url("../../images/banner.jpg")
+	background-repeat no-repeat
+	background-position center
+	background-size cover
+
+	+below(768px)
+		padding-top wv(80)
+		background-image url("../../images/banner-mobile.jpg")
+
+	&__logo
+		display none
+
+		+below(768px)
+			display block
+			position absolute
+			max-width wv(190)
+			left 50%
+			transform: translateX(-50%)
+			top wv(130)
+
+		img
+			width 100%
+
+	&__title
+		padding-top w(225)
+		padding-bottom w(105)
+		text-align center
+		text-transform uppercase
+		font-family $ff-futur
+		font-size w(180)
+		font-style italic
+		line-height w(167)
+		font-weight 400
+		color white
+
+		+below(768px)
+			padding-top wv(215)
+			padding-bottom wv(105)
+			font-size wv(68)
+			line-height wv(68)
+
+		& span
+			font-family $ff-futur-b
+			font-size w(270)
+			font-style normal
+			line-height w(196)
+			font-weight 800
+
+			+below(768px)
+				font-size wv(100)
+
+	&__text
+		padding 0 w(390) w(150) w(1000)
+		font-size w(24)
+		line-height w(31)
+		color white
+
+		a
+			color $white
+
+			&:hover
+				text-decoration none
+
+		+below(768px)
+			padding 0 wv(50) wv(70)
+			font-size wv(24)
+			line-height wv(31)
